@@ -6,7 +6,7 @@
 /*   By: mmartin <mmartin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/18 17:15:10 by mmartin           #+#    #+#             */
-/*   Updated: 2014/01/19 18:18:50 by mmartin          ###   ########.fr       */
+/*   Updated: 2014/06/01 11:52:28 by mmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,8 @@ static int	ft_pos(char *line)
 static int	ft_nbrX(char *line)
 {
 	int		i;
-	int		j;
 
 	i = 0;
-	j = 0;
 	while (*line)
 	{
 		if (*line == '-' || *line == '+' || ft_isdigit(*line))
@@ -80,11 +78,9 @@ static int	ft_nbrX(char *line)
 static int	*ft_get_nbr(char *line, t_data *d)
 {
 	int		i;
-	int		j;
 	int		*tab;
 
 	i = 0;
-	j = 0;
 	tab = NULL;
 	i = ft_nbrX(line);
 	tab = (int *)malloc(sizeof(int) * (i + 1));
